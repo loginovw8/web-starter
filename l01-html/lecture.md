@@ -77,3 +77,8 @@ HTML (HyperText Markup Language) - стандартный язык размет�
 
 	<button type="button">Название</button>
 
+## Справочная информация
+
+	https://developer.mozilla.org/en-US/docs/Web/HTML
+	https://www.w3schools.com/html/default.asp
+

@@ -1,0 +1,60 @@
+h1 {
+	padding: 15px; /* Внутренний отступ */
+	font-size: 24px; /* Размер шрифта */
+}
+
+.section {
+	padding: 15px;
+	margin: 15px; /* Внешний отступ */
+	display: inline-block; /* Тип отображения */
+	border: 1px solid gray; /* Граница */
+	border-radius: 8px; /* Скругление границ блока */
+}
+
+.section__image-wrapper {
+	text-align: center; /* Выравнивание */
+}
+
+.section__description {
+	max-width: 600px; /* Максимальная ширина элемента */
+}
+
+.section__link {
+	text-decoration: none; /* Стиль оформления текста */
+}
+
+.section__list {
+	list-style-type: square; /* Стиль отображения элементов списка */
+}
+
+.section__button {
+	padding: 12px;
+	border: none;
+	transition: all .2s; /* Анимация изменения состояния */
+}
+
+.section__button:hover { /* Модификация стилей при наведении курсора на элемент */
+	background-color: black; /* Цвет фона элемента */
+	cursor: pointer; /* Тип курсора */
+}
+
+.section__button--primary {
+	background-color: green; 
+	color: white; /* Цвет текста элемента */
+}
+
+.section__button--danger {
+	background-color: red;
+	color: white;
+}
+
+/**
+ * SCREEN WIDTH < 600px
+ */
+
+@media (max-width: 600px) {
+	.section {
+		background-color: lightblue;	
+	}
+}
+
