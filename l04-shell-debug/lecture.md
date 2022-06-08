@@ -9,56 +9,56 @@
 компоненты вашего компьютера (аппаратная часть) материальны, виртуальные машины часто рассматриваются как виртуальные
 компьютеры или программно-определяемые компьютеры в физических серверах, существуя только в виде кода.
 
-https://azure.microsoft.com/ru-ru/overview/what-is-a-virtual-machine/#overview
+  https://azure.microsoft.com/ru-ru/overview/what-is-a-virtual-machine/#overview
 
 Популярные гипервизоры
 
-https://www.vmware.com/products/workstation-player.html
-https://www.virtualbox.org/
-https://www.proxmox.com/
+  https://www.vmware.com/products/workstation-player.html
+  https://www.virtualbox.org/
+  https://www.proxmox.com/
 
 ## Основы работы с командной строкой
 
 Установка подсистемы Windows для Linux
 
-https://docs.microsoft.com/ru-ru/windows/wsl/install
+  https://docs.microsoft.com/ru-ru/windows/wsl/install
 
 SSH - сетевой протокол прикладного уровня
 
-https://ru.wikipedia.org/wiki/SSH
+  https://ru.wikipedia.org/wiki/SSH
 
 Утилита-мультиплексор Tmux
 
-https://ru.wikipedia.org/wiki/Tmux
+  https://ru.wikipedia.org/wiki/Tmux
 
 ## Текстовые редакторы и IDE
 
 Текстовый редактор Visual Studio Code
 
-https://code.visualstudio.com/
+  https://code.visualstudio.com/
 
 Текстовый редактор Vim
 
-https://www.vim.org/
+  https://www.vim.org/
 
 Текстовый редактор Nano
 
-https://www.nano-editor.org/
+  https://www.nano-editor.org/
 
 IDE JetBrains
 
-https://www.jetbrains.com/
+  https://www.jetbrains.com/
 
 IDE Visual Studio
 
-https://visualstudio.microsoft.com/ru/
+  https://visualstudio.microsoft.com/ru/
 
 ## Отладка программного обеспечения
 
 Отладка с помощью Visual Studio Code
 
-https://code.visualstudio.com/docs/editor/debugging
+  https://code.visualstudio.com/docs/editor/debugging
 
 Node.js
 
-https://nodejs.org/
+  https://nodejs.org/
