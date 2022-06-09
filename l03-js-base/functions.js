@@ -30,7 +30,7 @@ function isInRange(num, startRange, endRange) {
 }
 
 // Написать функцию для проверки четности или нечетности
-function isEvenOrOdd(num, startRange, endRange) {
+function isEvenOrOdd(num) {
   // Вывести: "num - четное" или "num - нечетное"
 }
 
