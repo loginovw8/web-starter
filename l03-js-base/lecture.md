@@ -51,3 +51,8 @@
 Prompt
 
     ./scripts/13-prompt.js
+
+## Справочная информация
+
+    https://developer.mozilla.org/en-US/docs/Web/JavaScript
+    https://www.w3schools.com/jsref/default.asp

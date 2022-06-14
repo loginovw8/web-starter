@@ -1,4 +1,4 @@
-# JavaScript. DOM-дерево, взаимодействие с HTML-элементами
+# JavaScript. DOM-дерево, взаимодействие с HTML-элементами. JSON
 
 Объекты
 
@@ -11,3 +11,8 @@ DOM-дерево
 Браузерные события
 
     ./scripts/03-action.js
+
+## Справочная информация
+
+    https://developer.mozilla.org/en-US/docs/Web/JavaScript
+    https://www.w3schools.com/jsref/default.asp
