@@ -1,6 +1,6 @@
 const express = require('express')
 const path = require('path')
-const fs = require('fs');
+const fs = require('fs')
 const app = express()
 
 // Путь к директории файлов ресурсов (css, js, images)
@@ -18,18 +18,31 @@ app.listen(3000)
 /**
  * Маршруты
  */
-app.get("/", (req, res) => {
-  let data = fs.readFileSync('./public/items.json', 'utf8');
+app.get('/', (req, res) => {
+  let data = fs.readFileSync('./public/items.json', 'utf8')
 
-  res.render("home", {
-    "items": JSON.parse(data)
-  });
-});
+  res.render('home', {
+    'items': JSON.parse(data),
+  })
+})
 
-app.get("/about-us", (req, res) => {
-  res.render("about-us");
-});
+app.get('/items/:id', (req, res) => {
+  let file = fs.readFileSync('./public/items.json', 'utf8')
+  let data = JSON.parse(file)
 
-app.get("/contacts", (req, res) => {
-  res.render("contacts");
-});
+  let id = Number(req.params.id)
+
+  let item = data.find(item => item.id === id)
+
+  res.render('item', {
+    'item': item,
+  })
+})
+
+app.get('/about-us', (req, res) => {
+  res.render('about-us')
+})
+
+app.get('/contacts', (req, res) => {
+  res.render('contacts')
+})
