@@ -14,13 +14,25 @@ SQL (аббр. от англ. Structured Query Language — «язык стру�
 
     show databases;
 
+Пример создания базы данных
+
+    create database nature;
+
 Подключить базу данных
 
-    use <database>;
+    use database;
 
 Просмотр листинга таблиц БД
 
     show tables;
+
+Пример создания таблицы в БД
+
+    create table items (id int primary key auto_increment, title varchar(255), image varchar(255));
+
+Просмотр структуры таблицы БД
+
+    describe items;
 
 Выборка данных
 
