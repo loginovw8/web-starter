@@ -5,3 +5,39 @@
 ## СУБД MySQL
 
     https://www.mysql.com/
+
+## SQL
+
+SQL (аббр. от англ. Structured Query Language — «язык структурированных запросов») — декларативный язык программирования, применяемый для создания, модификации и управления данными в реляционной базе данных, управляемой соответствующей системой управления базами данных.
+
+Просмотр листинга баз данных
+
+    show databases;
+
+Подключить базу данных
+
+    use <database>;
+
+Просмотр листинга таблиц БД
+
+    show tables;
+
+Выборка данных
+
+    SELECT * FROM <table>;
+
+Выборка данных с условием
+
+    SELECT * FROM <table> WHERE <column>=<value>;
+
+Запись данных в БД
+
+    INSERT INTO <table> (<column>, <column>) VALUES ('<value>', '<value>');
+
+Обновить запись в БД
+
+    UPDATE <table> SET <column>=<value>;
+
+Удалить запись из БД
+
+    DELETE FROM <table> WHERE <column>=<value>;
