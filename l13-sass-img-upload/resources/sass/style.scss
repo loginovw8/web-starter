@@ -1,0 +1,43 @@
+$breakpoints: (
+    'small': (max-width: 600px)
+);
+
+@mixin breakpoint($value) {
+    @if map-has-key($breakpoints, $value) {
+        @media #{inspect(map-get($breakpoints, $value))} {
+            @content;
+        }
+    }
+}
+
+.container {
+    padding: 20px;
+    display: inline-block;
+    border: 1px solid black;
+
+    @include breakpoint('small') {
+        padding: 0;
+        border: none;
+        display: block;
+        text-align: center;
+    }
+
+    &__image {
+        display: block;
+        border-radius: 8px;
+
+        @include breakpoint('small') {
+            margin: 0 auto;
+        }
+    }
+
+    &__title {
+        color: blue;
+        display: inline-block;
+
+        &:hover {
+            color: red;
+            cursor: pointer;
+        }
+    }
+}

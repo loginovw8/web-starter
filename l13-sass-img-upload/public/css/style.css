@@ -1,0 +1,32 @@
+.container {
+  padding: 20px;
+  display: inline-block;
+  border: 1px solid black;
+}
+@media (max-width: 600px) {
+  .container {
+    padding: 0;
+    border: none;
+    display: block;
+    text-align: center;
+  }
+}
+.container__image {
+  display: block;
+  border-radius: 8px;
+}
+@media (max-width: 600px) {
+  .container__image {
+    margin: 0 auto;
+  }
+}
+.container__title {
+  color: blue;
+  display: inline-block;
+}
+.container__title:hover {
+  color: red;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=style.css.map */
