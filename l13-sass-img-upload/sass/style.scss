@@ -1,14 +1,4 @@
-$breakpoints: (
-    'small': (max-width: 600px)
-);
-
-@mixin breakpoint($value) {
-    @if map-has-key($breakpoints, $value) {
-        @media #{inspect(map-get($breakpoints, $value))} {
-            @content;
-        }
-    }
-}
+@import "modules/mixins";
 
 .container {
     padding: 20px;
