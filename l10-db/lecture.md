@@ -30,6 +30,14 @@ SQL (аббр. от англ. Structured Query Language — «язык стру�
 
     CREATE TABLE items (id INT PRIMARY KEY AUTO_INCREMENT, title VARCHAR(255), image VARCHAR(255));
 
+Пример изменения типа столбца в БД
+
+    ALTER TABLE items MODIFY COLUMN description VARCHAR(3200);
+
+Пример добавления столбца в БД
+
+    ALTER TABLE items ADD description VARCHAR(255) AFTER image;
+
 Просмотр структуры таблицы БД
 
     DESCRIBE items;
@@ -53,3 +61,11 @@ SQL (аббр. от англ. Structured Query Language — «язык стру�
 Пример удаления записи из БД
 
     DELETE FROM nature WHERE id=2;
+
+Удаление БД
+
+    DROP DATABASE nature;
+
+Удаление таблицы в БД
+
+    DROP TABLE items;
