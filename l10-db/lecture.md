@@ -36,20 +36,20 @@ SQL (аббр. от англ. Structured Query Language — «язык стру�
 
 Выборка данных
 
-    SELECT * FROM <table>;
+    SELECT * FROM nature;
 
-Выборка данных с условием
+Пример выборки данных с условием
 
-    SELECT * FROM <table> WHERE <column>=<value>;
+    SELECT * FROM nature WHERE id=2;
 
-Запись данных в БД
+Пример записи данных в БД
 
-    INSERT INTO <table> (<column>, <column>) VALUES ('<value>', '<value>');
+    INSERT INTO nature (title, image) VALUES ('Природа', 'nature.jpeg');
 
-Обновить запись в БД
+Пример обновления записи в БД
 
-    UPDATE <table> SET <column>=<value>;
+    UPDATE nature SET title='Природа 2' WHERE id=2;
 
-Удалить запись из БД
+Пример удаления записи из БД
 
-    DELETE FROM <table> WHERE <column>=<value>;
+    DELETE FROM nature WHERE id=2;
