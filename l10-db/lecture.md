@@ -12,27 +12,27 @@ SQL (аббр. от англ. Structured Query Language — «язык стру�
 
 Просмотр листинга баз данных
 
-    show databases;
+    SHOW DATABASES;
 
 Пример создания базы данных
 
-    create database nature;
+    CREATE DATABASE nature;
 
 Подключить базу данных
 
-    use database;
+    USE nature;
 
 Просмотр листинга таблиц БД
 
-    show tables;
+    SHOW TABLES;
 
 Пример создания таблицы в БД
 
-    create table items (id int primary key auto_increment, title varchar(255), image varchar(255));
+    CREATE TABLE items (id INT PRIMARY KEY AUTO_INCREMENT, title VARCHAR(255), image VARCHAR(255));
 
 Просмотр структуры таблицы БД
 
-    describe items;
+    DESCRIBE items;
 
 Выборка данных
 
