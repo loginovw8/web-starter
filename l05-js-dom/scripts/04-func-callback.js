@@ -20,3 +20,16 @@ loadScript('./scripts/01-obj.js', displayMessage);
 //loadScript('./scripts/01-obj.js', (script) => {
 	//console.log(script);
 //});
+
+function display(msg, callback) {
+	callback(msg);
+}
+
+display('hello', function(msg) {
+	console.log(msg);
+
+	display('world', function(msg) {
+		console.log(msg);
+	});
+});
+
