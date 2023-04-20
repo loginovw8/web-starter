@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+}
+
+h1 {
+    /* Внутренний отступ */
+    padding: 15px;
+    /* Размер шрифта */
+    font-size: 24px;
+}
+
+.section {
+    padding: 15px;
+    /* Внешний отступ */
+    margin: 15px;
+    /* Тип отображения */
+    display: inline-block;
+    /* Граница */
+    border: 1px solid gray;
+    /* Скругление границ */
+    border-radius: 8px;
+}
+
+.section__image-wrapper {
+    /* Выравнивание текста */
+    text-align: center;
+}
+
+.section__image {
+    width: 100%;
+    height: auto;
+}
+
+.section__description {
+    /* Максимальная ширина элемента */
+    max-width: 600px;
+}
+
+.section__link {
+    /* Стиль оформления текста */
+    text-decoration: none;
+}
+
+.section__list {
+    /* Стиль отображения элементов списка */
+    list-style-type: square;
+}
+
+.section__button {
+    padding: 12px;
+    border: none;
+    /* Анимация изменения состояния */
+    transition: all .2s;
+}
+
+/* Модификация стилей при наведении курсора на элемент */
+.section__button:hover {
+    /* Цвет фона элемента */
+    background-color: black;
+    /* Тип курсора */
+    cursor: pointer;
+}
+
+.section__button--primary {
+    background-color: green;
+    /* Цвет текста элемента */
+    color: white;
+}
+
+.section__button--danger {
+    background-color: red;
+    color: white;
+}
+
+/**
+ * Адаптивный дизайн
+ * SCREEN WIDTH < 600px
+ */
+@media (max-width: 600px) {
+    .section {
+        background-color: lightblue;
+    }
+}

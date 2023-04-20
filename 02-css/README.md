@@ -42,4 +42,3 @@ CSS (Cascading Style Sheets) - формальный язык описания в
 
 	https://developer.mozilla.org/en-US/docs/Web/CSS
 	https://www.w3schools.com/css/default.asp
-
