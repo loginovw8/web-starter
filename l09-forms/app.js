@@ -22,49 +22,49 @@ app.listen(3000)
  * Маршруты
  */
 app.get('/', (req, res) => {
-  let data = fs.readFileSync('./public/items.json', 'utf8')
+    let data = fs.readFileSync('./public/items.json', 'utf8')
 
-  res.render('home', {
-    'items': JSON.parse(data),
-  })
+    res.render('home', {
+        'items': JSON.parse(data),
+    })
 })
 
 app.get('/items/:id', (req, res) => {
-  let file = fs.readFileSync('./public/items.json', 'utf8')
-  let data = JSON.parse(file)
+    let file = fs.readFileSync('./public/items.json', 'utf8')
+    let data = JSON.parse(file)
 
-  let id = Number(req.params.id)
+    let id = Number(req.params.id)
 
-  let item = data.find(item => item.id === id)
+    let item = data.find(item => item.id === id)
 
-  res.render('item', {
-    'item': item,
-  })
+    res.render('item', {
+        'item': item,
+    })
 })
 
-app.get('/add', (req, res) => {
-  res.render('add')
+app.get('/items/create', (req, res) => {
+    res.render('create')
 })
 
-app.post('/store', (req, res) => {
-  let file = fs.readFileSync('./public/items.json', 'utf8')
-  let data = JSON.parse(file)
+app.post('/items/store', (req, res) => {
+    let file = fs.readFileSync('./public/items.json', 'utf8')
+    let data = JSON.parse(file)
 
-  data.push({
-    id: req.body.id,
-    title: req.body.title,
-    image: req.body.image,
-  })
+    data.push({
+        id: req.body.id,
+        title: req.body.title,
+        image: req.body.image,
+    })
 
-  fs.writeFile(
-    './public/items.json',
-    JSON.stringify(data),
-    (err) => {
-      if (err) {
-        console.log(err)
-      }
+    fs.writeFile(
+        './public/items.json',
+        JSON.stringify(data),
+        (err) => {
+            if (err) {
+                console.log(err)
+            }
 
-      res.redirect('/')
-    },
-  )
+            res.redirect('/')
+        },
+    )
 })
