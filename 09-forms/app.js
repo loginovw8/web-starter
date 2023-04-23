@@ -29,7 +29,7 @@ app.get('/', (req, res) => {
     })
 })
 
-app.get('/items/:id', (req, res) => {
+app.get('/items/:id/show', (req, res) => {
     let file = fs.readFileSync('./public/items.json', 'utf8')
     let data = JSON.parse(file)
 
@@ -58,7 +58,7 @@ app.post('/items/store', (req, res) => {
 
     fs.writeFile(
         './public/items.json',
-        JSON.stringify(data),
+        JSON.stringify(data, null, 4),
         (err) => {
             if (err) {
                 console.log(err)
