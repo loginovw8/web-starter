@@ -22,7 +22,7 @@ app.get('/', (req, res) => {
     let data = fs.readFileSync('./public/items.json', 'utf8');
 
     res.render('home', {
-        'items': JSON.parse(data),
+        // 'items': JSON.parse(data),
     });
 });
 

@@ -1,7 +1,7 @@
 const express = require('express')
 const mysql = require('mysql');
-const path = require('path')
-const app = express()
+const path = require('path');
+const app = express();
 
 // Соединение с базой данных
 const connection = mysql.createConnection({
@@ -26,7 +26,7 @@ app.set('views', path.join(__dirname, 'views'))
 app.use(express.urlencoded({ extended: true }))
 
 // Запуск веб-сервера по адресу http://localhost:3000
-app.listen(3000)
+app.listen(3000);
 
 /**
  * Маршруты
