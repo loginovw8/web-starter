@@ -22,7 +22,7 @@ app.listen(3000);
  * Маршруты
  */
 app.get('/', (req, res) => {
-    let data = fs.readFileSync('./public/items.json', 'utf8')
+    let data = fs.readFileSync('./public/items.json', 'utf8');
 
     res.render('home', {
         'items': JSON.parse(data),
@@ -30,12 +30,12 @@ app.get('/', (req, res) => {
 });
 
 app.get('/items/:id/show', (req, res) => {
-    let file = fs.readFileSync('./public/items.json', 'utf8')
-    let data = JSON.parse(file)
+    let file = fs.readFileSync('./public/items.json', 'utf8');
+    let data = JSON.parse(file);
 
-    let id = Number(req.params.id)
+    let id = Number(req.params.id);
 
-    let item = data.find(item => item.id === id)
+    let item = data.find(item => item.id === id);
 
     res.render('item', {
         'item': item,
@@ -43,12 +43,12 @@ app.get('/items/:id/show', (req, res) => {
 });
 
 app.get('/items/create', (req, res) => {
-    res.render('create')
-})
+    res.render('create');
+});
 
 app.post('/items/store', (req, res) => {
-    let file = fs.readFileSync('./public/items.json', 'utf8')
-    let data = JSON.parse(file)
+    let file = fs.readFileSync('./public/items.json', 'utf8');
+    let data = JSON.parse(file);
 
     data.push({
         id: req.body.id,
@@ -61,10 +61,10 @@ app.post('/items/store', (req, res) => {
         JSON.stringify(data, null, 4),
         (err) => {
             if (err) {
-                console.log(err)
+                console.log(err);
             }
 
-            res.redirect('/')
+            res.redirect('/');
         },
     );
 });
