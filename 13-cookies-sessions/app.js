@@ -104,5 +104,5 @@ app.post('/register', (req, res) => {
       req.session.auth = true;
 
       res.redirect('/')
-  }); 
+  });
 });
