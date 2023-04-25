@@ -2,9 +2,12 @@
     <li><a href="/">Главная</a></li>
     <% if (auth) { %>
         <li><a href="/add">Добавить</a></li>
-        <li><a href="/logout">Выйти</a></li> 
+        <li>
+            <form action="/logout" method="post">
+                <button>Выйти</button>
+            </form>
+        </li>
     <% } else { %>
         <li><a href="/auth">Авторизация</a></li>
     <% } %>
-    <li><a href="/lock">Нет доступа</a></li>
 </ul>
