@@ -1,0 +1,55 @@
+h1 {
+    padding: 15px;
+    font-size: 24px;
+}
+
+.section {
+    padding: 15px;
+    margin: 15px;
+    display: inline-block;
+    border: 1px solid gray;
+    border-radius: 8px;
+}
+
+.section__image-wrapper {
+    text-align: center;
+}
+
+.section__description {
+    max-width: 600px;
+}
+
+.section__link {
+    text-decoration: none;
+}
+
+.section__list {
+    list-style-type: square;
+}
+
+.section__button {
+    padding: 12px;
+    border: none;
+    transition: all .2s;
+}
+
+.section__button:hover {
+    background-color: black;
+    cursor: pointer;
+}
+
+.section__button--primary {
+    background-color: green;
+    color: white;
+}
+
+.section__button--danger {
+    background-color: red;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .section {
+        background-color: lightblue;
+    }
+}

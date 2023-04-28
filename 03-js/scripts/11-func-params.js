@@ -1,7 +1,7 @@
 /**
  * ФУНКЦИИ
  *
- * Переменные и параметры
+ * Передача переменных и параметров в функцию
  */
 
 function showGreeting(inputName) {
@@ -11,4 +11,3 @@ function showGreeting(inputName) {
 
 let username = 'Alex';
 showGreeting(username);
-

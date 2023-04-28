@@ -74,7 +74,7 @@ h1 {
 
 /**
  * Адаптивный дизайн
- * SCREEN WIDTH < 600px
+ * Ширина экрана < 600px
  */
 @media (max-width: 600px) {
     .section {

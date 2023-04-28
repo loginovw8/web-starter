@@ -1,7 +1,7 @@
 /**
  * ФУНКЦИИ
  *
- * Возврат значения
+ * Возврат значения из функции
  */
 
 function showGreeting(inputName) {
@@ -12,4 +12,3 @@ function showGreeting(inputName) {
 let username = 'Alex';
 let string = showGreeting(username);
 console.log(string);
-

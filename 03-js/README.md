@@ -1,4 +1,14 @@
-# JavaScript. Введение
+# JavaScript. Введение в программирование
+
+Для того чтобы подключить JS-файл к HTML-документу необходимо включить 
+элемент script в элемент head:
+
+	<head>
+		<title>Заголовок сайта</title>
+		<script src="./app.js"></script>
+	</head>
+
+Для того чтобы работать с примерами кода подключите соответствующие файлы:
 
 Переменные
     
@@ -52,7 +62,12 @@ Prompt
 
     ./scripts/13-prompt.js
 
+## Задачи для самоконтроля
+
+Создайте и проверьте работоспособность функций, описанных в файле functions.js
+
 ## Справочная информация
 
+    https://learn.javascript.ru/
     https://developer.mozilla.org/en-US/docs/Web/JavaScript
     https://www.w3schools.com/jsref/default.asp

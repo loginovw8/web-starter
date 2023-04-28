@@ -1,4 +1,4 @@
-# CSS. Теоретическая часть
+# CSS
 
 CSS (Cascading Style Sheets) - формальный язык описания внешнего вида документа (веб-страницы), написанного с использованием языка разметки.
 
@@ -37,6 +37,16 @@ CSS (Cascading Style Sheets) - формальный язык описания в
 	.subtitle {
 		font-size: 18px;
 	}
+
+## Метатег viewport
+
+Задача метатэга viewport заключается в контроле масштаба отображения страницы
+
+    https://developer.mozilla.org/en-US/docs/Web/HTML/Viewport_meta_tag
+
+## БЭМ-метология
+
+    https://ru.bem.info/methodology/css/
 
 ## Справочная информация
 
