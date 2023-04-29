@@ -1,4 +1,5 @@
 const http = require('http');
+const path = require('path');
 const fs = require('fs');
 
 const server = http.createServer(function (req, res) {
@@ -12,6 +13,14 @@ const server = http.createServer(function (req, res) {
         fs.readFile('./pages/about-us.html', function (err, html) {
             res.end(html);
         });
+    }
+
+    if (req.url.match('\.jpeg')) {
+        let imagePath = path.join(__dirname, 'img', req.url)
+        fs.readFile(imagePath, function (err, img) {
+            res.writeHead(200, { 'Content-Type': 'image/jpeg' })
+            res.end(img)
+        })
     }
 });
 
