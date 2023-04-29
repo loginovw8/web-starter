@@ -11,7 +11,9 @@ const connection = mysql.createConnection({
 });
 
 connection.connect(function (err) {
-    if (err) throw err;
+    if (err) {
+        console.log(err);
+    }
 });
 
 // Обработка POST-запросов из форм

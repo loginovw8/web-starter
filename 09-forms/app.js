@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
 
     res.render('home', {
         'items': JSON.parse(data),
-    })
+    });
 });
 
 app.get('/items/:id/show', (req, res) => {
@@ -39,7 +39,7 @@ app.get('/items/:id/show', (req, res) => {
 
     res.render('item', {
         'item': item,
-    })
+    });
 });
 
 app.get('/items/create', (req, res) => {
@@ -54,7 +54,7 @@ app.post('/items/store', (req, res) => {
         id: req.body.id,
         title: req.body.title,
         image: req.body.image,
-    })
+    });
 
     fs.writeFile(
         './public/items.json',

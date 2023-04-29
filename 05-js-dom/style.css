@@ -1,76 +1,76 @@
 .section {
-  padding: 20px;
-  border-radius: 8px;
-  display: inline-block;
-  border: 2px solid blue;
-  background-color: lightcyan;
+    padding: 20px;
+    border-radius: 8px;
+    display: inline-block;
+    border: 2px solid blue;
+    background-color: lightcyan;
 }
 
 .section__image {
-  border-radius: 8px;
+    border-radius: 8px;
 }
 
 .section__title {
-  text-align: center;
+    text-align: center;
 }
 
 .section__description {
-  color: blue;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 25px;
+    color: blue;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 25px;
 }
 
 .section__wrapper {
-  text-align: center;
+    text-align: center;
 }
 
 .section__input {
-  padding: 7px 12px;
+    padding: 7px 12px;
 }
 
 .section__button {
-  padding: 7px 12px;
-  color: white;
-  background-color: blue;
+    padding: 7px 12px;
+    color: white;
+    background-color: blue;
 }
 
 .section__button:hover {
-  cursor: pointer;
-  color: black;
-  background-color: aqua;
+    cursor: pointer;
+    color: black;
+    background-color: aqua;
 }
 
 .section__container {
-  padding: 10px;
-  list-style-type: none;
+    padding: 10px;
+    list-style-type: none;
 }
 
 .section__list-item {
-  display: flex;
-  background-color: white;
-  border-radius: 8px;
-  padding: 12px;
-  margin-bottom: 7px;
+    display: flex;
+    background-color: white;
+    border-radius: 8px;
+    padding: 12px;
+    margin-bottom: 7px;
 }
 
 .section__list-item--text {
-  flex: 1;
+    flex: 1;
 }
 
 .section__list-item--button {
-  color: white;
-  border: none;
-  padding: 4px;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-right: 7px;
+    color: white;
+    border: none;
+    padding: 4px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 7px;
 }
 
 .button__color--red {
-  background-color: red;
+    background-color: red;
 }
 
 .button__color--green {
-  background-color: green;
+    background-color: green;
 }
