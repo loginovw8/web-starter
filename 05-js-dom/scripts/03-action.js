@@ -2,11 +2,11 @@
  * БРАУЗЕРНЫЕ СОБЫТИЯ
  */
 
- let button = document.querySelector('.hello');
+let button = document.querySelector('.hello');
 
- button.addEventListener('click', sayHello);
+button.addEventListener('click', sayHello);
 
- function sayHello() {
+function sayHello() {
     let input = document.querySelector('.input');
     console.log(input.value);
- }
+}
