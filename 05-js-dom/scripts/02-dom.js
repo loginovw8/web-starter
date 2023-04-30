@@ -13,8 +13,10 @@ let button = document.querySelector('.hello');
 // Изменить CSS свойства объекта
 // button.style.fontSize = "24px";
 
-// Создать объект p и добавить в HTML
+// Создать объект p
 let p = document.createElement('p');
+
+// Добавить класс paragraph к элементу p
 p.classList.add('paragraph');
 
 // Создать текстовый элемент для p
