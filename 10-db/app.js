@@ -45,7 +45,7 @@ app.get('/', (req, res) => {
             'items': data,
         });
     });
-})
+});
 
 app.get('/items/:id', (req, res) => {
     connection.query("SELECT * FROM items WHERE id=?", [req.params.id],
@@ -58,11 +58,11 @@ app.get('/items/:id', (req, res) => {
                 'item': data[0],
             })
         });
-})
+});
 
 app.get('/add', (req, res) => {
     res.render('add')
-})
+});
 
 app.post('/store', (req, res) => {
     connection.query(
@@ -76,4 +76,8 @@ app.post('/store', (req, res) => {
             res.redirect('/');
         }
     );
-})
+});
+
+app.get('/auth', (req, req) => {
+    res.render('auth');
+});
