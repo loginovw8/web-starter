@@ -77,7 +77,3 @@ app.post('/store', (req, res) => {
         }
     );
 });
-
-app.get('/auth', (req, req) => {
-    res.render('auth');
-});

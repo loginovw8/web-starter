@@ -22,6 +22,8 @@ const server = http.createServer(function (req, res) {
             res.end(img)
         })
     }
+
+    // if (req.url === '/items/:id') {}
 });
 
 server.listen(8080, function () {
