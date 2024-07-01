@@ -1,17 +1,16 @@
 # Web-разработка. Стартовый уровень
 
 Данный курс включает в себя изучение основ языка программирования JavaScript и
-ознакомление с базовыми принципами построения веб-приложений. Курс предназначен 
-для учеников старшей школы и подходит в качестве первого ознакомления с азами 
+ознакомление с базовыми принципами построения веб-приложений. Курс предназначен
+для учеников старшей школы и подходит в качестве первого ознакомления с азами
 программирования.
 
 ## Разделы программы обучения
 
-Курс состоит из 13 уроков:
-
-1. Основы HTML.
-2. Основы CSS.
-3. Введение в язык программирования JavaScript:
+1. Основы работы с командной строкой, текстовые редакторы и IDE.
+2. Основы HTML.
+3. Основы CSS.
+4. Введение в язык программирования JavaScript:
     - Переменные;
     - Типы данных;
     - Преобразование типов;
@@ -19,10 +18,8 @@
     - Операторы сравнения;
     - Условное ветвление if;
     - Логические операторы;
-    - Цикл while;
-    - Цикл for;
+    - Циклы for и while;
     - Функции.
-4. Основы работы с командной строкой, текстовые редакторы и IDE.
 5. DOM-дерево, взаимодействие с HTML-элементами средствами языка JavaScript.
 6. Массивы в языке JavaScript.
 7. Node.js - среда выполнения JavaScript-кода.
@@ -33,13 +30,13 @@
 12. Архитектура построения веб-приложений.
 13. Работа с cookies и sessions.
 
-## Ссылки на ресурсы
+## Справочная информация
 
-- https://developer.mozilla.org/en-US/docs/Web/HTML
-- https://www.w3schools.com/html/default.asp
-- https://developer.mozilla.org/en-US/docs/Web/CSS
-- https://www.w3schools.com/css/default.asp
-- https://ru.bem.info/methodology/css/
-- https://learn.javascript.ru/
-- https://developer.mozilla.org/en-US/docs/Web/JavaScript
-- https://www.w3schools.com/jsref/default.asp
+-   https://developer.mozilla.org/en-US/docs/Web/HTML
+-   https://www.w3schools.com/html/default.asp
+-   https://developer.mozilla.org/en-US/docs/Web/CSS
+-   https://www.w3schools.com/css/default.asp
+-   https://ru.bem.info/methodology/css/
+-   https://learn.javascript.ru/
+-   https://developer.mozilla.org/en-US/docs/Web/JavaScript
+-   https://www.w3schools.com/jsref/default.asp

@@ -30,4 +30,3 @@ let message = 10 + Number(c);
 console.log('1' + 2);
 console.log(3 + '2');
 console.log(2 + 2 + '2');
-

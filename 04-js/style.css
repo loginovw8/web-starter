@@ -38,12 +38,12 @@ h1 {
     cursor: pointer;
 }
 
-.section__button--primary {
+.section__button_primary {
     background-color: green;
     color: white;
 }
 
-.section__button--danger {
+.section__button_danger {
     background-color: red;
     color: white;
 }

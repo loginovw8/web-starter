@@ -5,17 +5,17 @@
  * Например, это может быть строка или число.
  */
 
-// Число | Number
+// Число | number
 
 let n = 10;
 n = 12.5;
 
-// Строка | String
+// Строка | string
 
 let message = "Привет";
 message = 'Одинарные кавычки';
 
-// Булевый (логический) тип | Boolean
+// Булевый (логический) тип | boolean
 
 let isGreater = true; // false
 isGreater = 2 > 3;

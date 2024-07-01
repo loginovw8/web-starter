@@ -18,8 +18,8 @@ const server = http.createServer(function (req, res) {
     if (req.url.match('\.jpeg')) {
         let imagePath = path.join(__dirname, 'img', req.url)
         fs.readFile(imagePath, function (err, img) {
-            res.writeHead(200, { 'Content-Type': 'image/jpeg' })
-            res.end(img)
+            res.writeHead(200, { 'Content-Type': 'image/jpeg' });
+            res.end(img);
         })
     }
 });

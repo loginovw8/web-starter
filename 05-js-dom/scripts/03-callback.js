@@ -12,3 +12,11 @@ function loadFile(msg, callback) {
 loadFile('Loading...', function () {
     console.log('File loaded.');
 });
+
+/**
+ * Альтернативная запись анонимной функции
+ */
+
+// loadFile('Loading...', () => {
+//     console.log('File loaded.');
+// });
