@@ -9,6 +9,8 @@ function showGreeting(inputName) {
     return message;
 }
 
-let username = 'Alex';
-let string = showGreeting(username);
-console.log(string);
+let username = prompt("Please enter your name", "Your name");
+
+if (username != null) {
+    alert(showGreeting(username));
+}
