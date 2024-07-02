@@ -51,6 +51,8 @@ h1 {
     border: none;
     /* Анимация изменения состояния */
     transition: all .2s;
+    /* Цвет текста элемента */
+    color: white;
 }
 
 /* Модификация стилей при наведении курсора на элемент */
@@ -63,13 +65,10 @@ h1 {
 
 .section__button_primary {
     background-color: green;
-    /* Цвет текста элемента */
-    color: white;
 }
 
 .section__button_danger {
     background-color: red;
-    color: white;
 }
 
 /**
