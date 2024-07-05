@@ -23,12 +23,10 @@
 5. DOM-дерево, взаимодействие с HTML-элементами средствами языка JavaScript.
 6. Массивы в языке JavaScript.
 7. Node.js - среда выполнения JavaScript-кода.
-8. Знакомство с фреймворком Express.
-9. Работа с HTML-формами. Пользовательские запросы.
-10. Введение в систему управления базами данных MySQL.
-11. Ограничение и смещение в MySQL. Пагинация.
-12. Архитектура построения веб-приложений.
-13. Работа с cookies и sessions.
+8. npm, шаблонизаторы и динамические маршруты.
+9. Обработка HTML-форм.
+10. Работа с cookies и sessions.
+11. Backend и frontend.
 
 ## Справочная информация
 
@@ -37,6 +35,5 @@
 -   https://developer.mozilla.org/en-US/docs/Web/CSS
 -   https://www.w3schools.com/css/default.asp
 -   https://ru.bem.info/methodology/css/
--   https://learn.javascript.ru/
 -   https://developer.mozilla.org/en-US/docs/Web/JavaScript
 -   https://www.w3schools.com/jsref/default.asp
