@@ -3,13 +3,13 @@ const path = require('path');
 const fs = require('fs');
 
 const server = http.createServer(function (req, res) {
-    if (req.url === '/') {
+    if (req.url === '/' && req.method === 'GET') {
         fs.readFile('./pages/home.html', function (err, html) {
             res.end(html);
         });
     }
 
-    if (req.url === '/about-us') {
+    if (req.url === '/about-us' && req.method === 'GET') {
         fs.readFile('./pages/about-us.html', function (err, html) {
             res.end(html);
         });
@@ -17,6 +17,7 @@ const server = http.createServer(function (req, res) {
 
     if (req.url.match('\.jpeg')) {
         let imagePath = path.join(__dirname, 'img', req.url)
+
         fs.readFile(imagePath, function (err, img) {
             res.writeHead(200, { 'Content-Type': 'image/jpeg' });
             res.end(img);

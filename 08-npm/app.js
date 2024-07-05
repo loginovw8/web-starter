@@ -1,4 +1,5 @@
 import http from 'http';
+// https://stackoverflow.com/questions/36795819/when-should-i-use-curly-braces-for-es6-import
 import { fileURLToPath } from 'url';
 import path, { dirname } from 'path';
 import fs from 'fs';
@@ -27,51 +28,6 @@ const server = http.createServer(function (req, res) {
 
         res.end(Mustache.render(template, { item: item }));
     }
-
-    if (req.url === '/items/create' && req.method === 'GET') {
-        fs.readFile('./pages/create.html', function (err, html) {
-            res.end(html);
-        });
-    }
-
-    if (req.url === '/items/store' && req.method === 'POST') {
-        let body = [];
-
-        req
-            .on('data', (chunk) => {
-                body.push(chunk);
-            })
-            .on('end', () => {
-                body = Buffer.concat(body).toString().split('&');
-
-                body.forEach((e, i) => {
-                    let s = e.split('=');
-                    body[i] = {
-                        key: s[0],
-                        value: s[1],
-                    };
-                });
-
-                let fileContent = fs.readFileSync('./items.json', 'utf8');
-                let data = JSON.parse(fileContent);
-
-                data.push({
-                    id: Number(body.find((e) => e.key == 'id').value),
-                    title: body.find((e) => e.key == 'title').value,
-                    image: body.find((e) => e.key == 'image').value,
-                });
-
-                fs.writeFile('./items.json',
-                    JSON.stringify(data, null, 4),
-                    () => {
-                        res.writeHead(302, {
-                            location: '/',
-                        });
-                        res.end();
-                    }
-                );
-            })
-    };
 
     if (req.url === '/about-us' && req.method === 'GET') {
         fs.readFile('./pages/about-us.html', function (err, html) {

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Item Page</title>
+        <link href="../style.css" rel="stylesheet" />
+    </head>
+    <body>
+        <ul>
+            <li><a href="/">Главная</a></li>
+            <li><a href="/about-us">О нас</a></li>
+        </ul>
+        <h1>Item Page</h1>
+
+        {{#item}}
+        <div class="section">
+            <h2 class="section__title">{{title}}</h2>
+            <img class="section__image" src="../{{image}}" />
+        </div>
+        {{/item}}
+    </body>
+</html>

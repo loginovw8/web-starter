@@ -1,0 +1,13 @@
+{{> header}}
+    {{> navigation}}
+    <h1>{{title}}</h1>
+
+    {{#items}}
+    <div class="section">
+        <a href="/items/{{id}}">
+            <h2 class="section__title">{{title}}</h2>
+            <img class="section__image" src="../{{image}}" />
+        </a>
+    </div>
+    {{/items}}
+{{> footer}}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Create Item</title>
+        <link href="../style.css" rel="stylesheet" />
+    </head>
+    <body>
+        <ul>
+            <li><a href="/">Главная</a></li>
+            <li><a href="/items/create">Создать элемент</a></li>
+            <li><a href="/about-us">О нас</a></li>
+        </ul>
+        <h1>Create Item Page</h1>
+
+        <form action="/items/store" method="post">
+            <div class="form-group">
+                <label class="form-group__label" for="id">id</label>
+                <input
+                    class="form-group__input"
+                    type="number"
+                    id="id"
+                    name="id"
+                    placeholder="id"
+                />
+            </div>
+
+            <div class="form-group">
+                <label class="form-group__label" for="title">title</label>
+                <input
+                    class="form-group__input"
+                    type="text"
+                    id="title"
+                    name="title"
+                    placeholder="title"
+                />
+            </div>
+
+            <div class="form-group">
+                <label class="form-group__label" for="image">image</label>
+                <input
+                    class="form-group__input"
+                    type="text"
+                    id="image"
+                    name="image"
+                    placeholder="image"
+                />
+            </div>
+
+            <input class="form-button" type="submit" value="Создать" />
+        </form>
+    </body>
+</html>
