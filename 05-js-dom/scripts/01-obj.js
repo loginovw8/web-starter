@@ -27,11 +27,10 @@ delete person.group;
 // Перебор всех свойств объекта
 for (let key in person) {
     console.log(key); // ключи
-    console.log(user[key]); // значения ключей
+    console.log(person[key]); // значения ключей
 }
 
 // Объект может содержать функции в качестве свойств
-
 const box = {
     label: 'Box with toys',
     getContent: function () {

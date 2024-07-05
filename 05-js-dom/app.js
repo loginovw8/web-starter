@@ -9,22 +9,22 @@ button.addEventListener('click', () => {
     }
 
     let li = document.createElement('li');
-    li.classList.add('section__list-item');
+    li.classList.add('list-item');
 
     let span = document.createElement('span');
-    span.classList.add('section__list-item--text');
+    span.classList.add('list-item__text');
     span.innerText = input.value;
 
     li.appendChild(span);
 
     let btnDelete = document.createElement('button');
-    btnDelete.classList.add('section__list-item--button');
-    btnDelete.classList.add('button__color--red');
+    btnDelete.classList.add('list-item__button');
+    btnDelete.classList.add('button_red');
     btnDelete.innerText = 'Удалить';
 
     let btnEdit = document.createElement('button');
-    btnEdit.classList.add('section__list-item--button');
-    btnEdit.classList.add('button__color--green');
+    btnEdit.classList.add('list-item__button');
+    btnEdit.classList.add('button_green');
     btnEdit.innerText = 'Изменить';
 
     let inp = document.createElement('input');

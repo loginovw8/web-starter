@@ -46,7 +46,7 @@
     list-style-type: none;
 }
 
-.section__list-item {
+.list-item {
     display: flex;
     background-color: white;
     border-radius: 8px;
@@ -54,11 +54,11 @@
     margin-bottom: 7px;
 }
 
-.section__list-item--text {
+.list-item__text {
     flex: 1;
 }
 
-.section__list-item--button {
+.list-item__button {
     color: white;
     border: none;
     padding: 4px;
@@ -67,10 +67,10 @@
     margin-right: 7px;
 }
 
-.button__color--red {
+.button_red {
     background-color: red;
 }
 
-.button__color--green {
+.button_green {
     background-color: green;
 }
