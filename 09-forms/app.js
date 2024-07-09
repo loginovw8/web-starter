@@ -70,7 +70,7 @@ const server = http.createServer(function (req, res) {
                         res.end();
                     }
                 );
-            })
+            });
     };
 
     if (req.url === '/about-us' && req.method === 'GET') {
