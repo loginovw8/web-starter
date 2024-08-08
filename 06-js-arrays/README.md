@@ -1,4 +1,4 @@
-# JavaScript. Массивы. JSON
+# JavaScript. Массивы. Холст
 
 Для того чтобы работать с примерами кода подключите соответствующие файлы:
 
@@ -14,6 +14,14 @@
 
     ./scripts/03-loop.js
 
+Рисование на холсте
+
+    ./scripts/04-canvas.js
+
+Базовые анимации на холсте
+
+    ./scripts/05-animation.js
+
 ## Задачи для самоконтроля
 
 Создайте и проверьте работоспособность функций, описанных в файле functions.js
@@ -22,3 +30,5 @@
 
     https://developer.mozilla.org/en-US/docs/Web/JavaScript
     https://www.w3schools.com/jsref/default.asp
+    https://developer.mozilla.org/ru/docs/Web/API/Canvas_API
+    https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Basic_animations
