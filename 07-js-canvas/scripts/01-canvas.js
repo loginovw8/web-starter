@@ -10,11 +10,12 @@ ctx.fillRect(25, 25, 100, 100);
 
 ctx.strokeStyle = 'blue';
 ctx.lineWidth = 3;
+ctx.setLineDash([8, 3]);
 ctx.beginPath();
 ctx.moveTo(150, 75);
-ctx.lineTo(200, 50);
+ctx.lineTo(250, 50);
 ctx.stroke();
 
 ctx.fillStyle = 'red';
 ctx.font = 'bold 22px Arial';
-ctx.fillText('0', 250, 75);
+ctx.fillText('0', 300, 75);

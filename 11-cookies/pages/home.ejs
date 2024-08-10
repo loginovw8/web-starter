@@ -3,14 +3,20 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>About Us</title>
-        <link href="../style.css" rel="stylesheet" />
+        <title>Home Page</title>
     </head>
     <body>
         <ul>
             <li><a href="/">Главная</a></li>
             <li><a href="/about-us">О нас</a></li>
         </ul>
-        <h1>About Us</h1>
+        <h1>Home Page</h1>
+
+        <% if (cookie) { %>
+            <form action="/cookie" method="post">
+                <span>Accept Cookies</span>
+                <button type="submit">Ok</button>
+            </form>
+        <% } %>
     </body>
 </html>

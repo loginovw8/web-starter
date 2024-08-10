@@ -12,9 +12,9 @@ npm - Node Package Manager
 
     npm install
 
-Шаблонизатор Mustache
+Шаблонизатор ejs 
 
-    https://github.com/janl/mustache.js
+    https://ejs.co/
 
 Регулярные выражения
 

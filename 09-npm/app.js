@@ -3,19 +3,16 @@ import http from 'http';
 import { fileURLToPath } from 'url';
 import path, { dirname } from 'path';
 import fs from 'fs';
-import Mustache from 'mustache';
+import ejs from 'ejs';
 
 const server = http.createServer(function (req, res) {
     if (req.url === '/' && req.method === 'GET') {
         let fileContent = fs.readFileSync('./items.json', 'utf8');
         let data = JSON.parse(fileContent);
-        let template = fs.readFileSync('./pages/home.html').toString();
 
-        res.end(Mustache.render(template, { title: 'Home', items: data }, {
-            header: fs.readFileSync('./pages/partials/header.html').toString(),
-            navigation: fs.readFileSync('./pages/partials/navigation.html').toString(),
-            footer: fs.readFileSync('./pages/partials/footer.html').toString(),
-        }));
+        ejs.renderFile('./pages/home.ejs', { title: 'Home', items: data }, {}, (err, html) => {
+            res.end(html);
+        });
     }
 
     if (/^\/items\/[0-9]+$/.test(req.url) && req.method === 'GET') {
@@ -24,13 +21,14 @@ const server = http.createServer(function (req, res) {
 
         let id = Number(req.url.split('/')[2]);
         let item = data.find(item => item.id === id);
-        let template = fs.readFileSync('./pages/item.html').toString();
 
-        res.end(Mustache.render(template, { item: item }));
+        ejs.renderFile('./pages/item.ejs', { title: 'Item', item: item }, {}, (err, html) => {
+            res.end(html);
+        });
     }
 
     if (req.url === '/about-us' && req.method === 'GET') {
-        fs.readFile('./pages/about-us.html', function (err, html) {
+        ejs.renderFile('./pages/about-us.ejs', {}, {}, (err, html) => {
             res.end(html);
         });
     }

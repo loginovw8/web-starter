@@ -1,31 +1,26 @@
 import http from 'http';
-import fs from 'fs';
 import cookie from 'cookie';
-import Mustache from 'mustache';
+import ejs from 'ejs';
 
 const server = http.createServer(function (req, res) {
     if (req.url === '/') {
-        let template = fs.readFileSync('./pages/home.html').toString();
-
         let cookies = cookie.parse(req.headers.cookie || '');
 
-        res.end(
-            Mustache.render(template, {
-                cookie: typeof cookies.accept == 'undefined' ? true : false,
-            })
-        );
+        ejs.renderFile('./pages/home.ejs', {
+            cookie: typeof cookies.accept == 'undefined' ? true : false
+        }, {}, (err, html) => {
+            res.end(html);
+        });
     }
 
     if (req.url === '/about-us') {
-        let template = fs.readFileSync('./pages/about-us.html').toString();
-
         let cookies = cookie.parse(req.headers.cookie || '');
 
-        res.end(
-            Mustache.render(template, {
-                cookie: typeof cookies.accept == 'undefined' ? true : false,
-            })
-        );
+        ejs.renderFile('./pages/about-us.ejs', {
+            cookie: typeof cookies.accept == 'undefined' ? true : false
+        }, {}, (err, html) => {
+            res.end(html);
+        });
     }
 
     if (req.url === '/cookie' && req.method === 'POST') {
