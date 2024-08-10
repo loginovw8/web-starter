@@ -17,6 +17,35 @@ const server = http.createServer(function (req, res) {
         }));
     }
 
+    if (req.url === '/api/v1/items' && req.method === 'GET') {
+        let fileContent = fs.readFileSync('./items.json', 'utf8');
+
+        res.setHeader('Content-Type', 'application/json;charset=UTF-8');
+        res.end(fileContent);
+    }
+
+    if (req.url === '/items' && req.method === 'GET') {
+        http.get('http://localhost:8080/api/v1/items', (response) => {
+            let rawData = '';
+
+            response
+                .on('data', (chunk) => { rawData += chunk; })
+                .on('end', () => {
+                    try {
+                        const parsedData = JSON.parse(rawData);
+                        console.log(parsedData);
+
+                        res.writeHead(302, {
+                            location: '/',
+                        });
+                        res.end();
+                    } catch (e) {
+                        console.error(e.message);
+                    }
+                });
+        });
+    }
+
     if (/^\/items\/[0-9]+$/.test(req.url) && req.method === 'GET') {
         let fileContent = fs.readFileSync('./items.json', 'utf8');
         let data = JSON.parse(fileContent);

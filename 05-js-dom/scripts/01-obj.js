@@ -35,7 +35,18 @@ const box = {
     label: 'Box with toys',
     getContent: function () {
         return 'toys';
-    }
-}
+    },
+};
 
 console.log(box.getContent());
+
+// this
+const rectangle = {
+    a: 4,
+    b: 5,
+    square: function () {
+        return this.a * this.b;
+    },
+};
+
+console.log(rectangle.square());
