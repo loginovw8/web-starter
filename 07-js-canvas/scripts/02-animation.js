@@ -2,18 +2,25 @@
  * Простые анимации
  */
 
-let canvas = document.getElementById("canvas");
-let ctx = canvas.getContext("2d");
+class Canvas {
+    constructor() {
+        this.params = {
+            x: 100,
+        };
+        this.canvas = document.getElementById("canvas");
+        this.ctx = this.canvas.getContext("2d");
+    }
 
-function animate() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    animate() {
+        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
 
-    ctx.fillStyle = 'red';
-    ctx.beginPath();
-    ctx.arc(100, 100, 50, 0, Math.PI * 2);
-    ctx.fill();
+        this.ctx.fillStyle = 'red';
+        this.ctx.beginPath();
+        this.ctx.arc(this.params.x, 100, 50, 0, Math.PI * 2);
+        this.ctx.fill();
 
-    window.requestAnimationFrame(animate);
+        window.requestAnimationFrame(() => this.animate());
+    }
 }
 
-animate();
+new Canvas().animate();
