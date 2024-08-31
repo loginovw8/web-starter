@@ -12,44 +12,43 @@ https://developer.mozilla.org/ru/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes
 
 Примеры реализации анимации
 
-    rotateX(timeDelta) {
-        const SPEED_X = 0.05; // rps
-        let angle = timeDelta _ 0.001 _ SPEED_X _ Math.PI _ 2;
+    /assets/7-1.png
 
-        for (let vertice of this.vertices) {
-            let dy = vertice.y - this.cy;
-            let dz = vertice.z - this.cz;
+    rotateX(t) {
+        let angle = 0.0003 * t * Math.PI * 2;
+
+        for (let v of this.vertices) {
+            let dy = v.y - this.cy;
+            let dz = v.z - this.cz;
             let y = dy * Math.cos(angle) - dz * Math.sin(angle);
             let z = dy * Math.sin(angle) + dz * Math.cos(angle);
-            vertice.y = y + this.cy;
-            vertice.z = z + this.cz;
+            v.y = y + this.cy;
+            v.z = z + this.cz;
         }
     }
 
-    rotateY(timeDelta) {
-        const SPEED_Y = 0.15; // rps
-        let angle = timeDelta * 0.001 * SPEED_Y * Math.PI * 2;
+    rotateY(t) {
+        let angle = 0.0002 * t * Math.PI * 2;
 
-        for (let vertice of cube.vertices) {
-            let dx = vertice.x - cube.cx;
-            let dz = vertice.z - cube.cz;
+        for (let v of this.vertices) {
+            let dx = v.x - this.cx;
+            let dz = v.z - this.cz;
             let x = dz * Math.sin(angle) + dx * Math.cos(angle);
             let z = dz * Math.cos(angle) - dx * Math.sin(angle);
-            vertice.x = x + cube.cx;
-            vertice.z = z + cube.cz;
+            v.x = x + this.cx;
+            v.z = z + this.cz;
         }
     }
 
-    rotateZ(timeDelta) {
-        const SPEED_Z = 0.10; // rps
-        let angle = timeDelta * 0.001 * SPEED_Z * Math.PI * 2;
+    rotateZ(t) {
+        let angle = 0.0001 * t * Math.PI * 2;
 
-        for (let vertice of this.vertices) {
-            let dx = vertice.x - this.cx;
-            let dy = vertice.y - this.cy;
+        for (let v of this.vertices) {
+            let dx = v.x - this.cx;
+            let dy = v.y - this.cy;
             let x = dx * Math.cos(angle) - dy * Math.sin(angle);
             let y = dx * Math.sin(angle) + dy * Math.cos(angle);
-            vertice.x = x + this.cx;
-            vertice.y = y + this.cy;
+            v.x = x + this.cx;
+            v.y = y + this.cy;
         }
     }

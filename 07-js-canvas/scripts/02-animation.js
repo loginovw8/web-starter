@@ -2,25 +2,37 @@
  * Простые анимации
  */
 
-class Canvas {
-    constructor() {
-        this.params = {
-            x: 100,
-        };
-        this.canvas = document.getElementById("canvas");
-        this.ctx = this.canvas.getContext("2d");
-    }
-
-    animate() {
-        this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-
-        this.ctx.fillStyle = 'red';
-        this.ctx.beginPath();
-        this.ctx.arc(this.params.x, 100, 50, 0, Math.PI * 2);
-        this.ctx.fill();
-
-        window.requestAnimationFrame(() => this.animate());
-    }
+function ellipse(px, py, r) {
+    return {
+        px: px,
+        py: py,
+        r: r,
+        draw: function (ctx) {
+            ctx.beginPath();
+            ctx.arc(this.px, this.py, this.r, 0, Math.PI * 2);
+            ctx.fill();
+        }
+    };
 }
 
-new Canvas().animate();
+function getCanvas(s, ctx) {
+    return {
+        selector: s,
+        ctx: ctx,
+        animate: function () {
+            this.ctx.clearRect(0, 0, this.selector.width, this.selector.height);
+
+            this.ctx.fillStyle = 'red';
+
+            let el = ellipse(this.selector.width / 2, this.selector.height / 2, 50);
+            el.draw(this.ctx);
+
+            window.requestAnimationFrame(() => this.animate());
+        }
+    };
+}
+
+let canvas = document.getElementById("canvas");
+let ctx = canvas.getContext("2d");
+
+getCanvas(canvas, ctx).animate();
