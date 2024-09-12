@@ -45,32 +45,3 @@
     padding: 10px;
     list-style-type: none;
 }
-
-.list-item {
-    display: flex;
-    background-color: white;
-    border-radius: 8px;
-    padding: 12px;
-    margin-bottom: 7px;
-}
-
-.list-item__text {
-    flex: 1;
-}
-
-.list-item__button {
-    color: white;
-    border: none;
-    padding: 4px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-right: 7px;
-}
-
-.button_red {
-    background-color: red;
-}
-
-.button_green {
-    background-color: green;
-}
