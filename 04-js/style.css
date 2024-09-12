@@ -1,3 +1,7 @@
+body {
+    margin: 0;
+}
+
 h1 {
     padding: 15px;
     font-size: 24px;
@@ -13,6 +17,12 @@ h1 {
 
 .section__image-wrapper {
     text-align: center;
+}
+
+.section__image {
+    width: 100%;
+    max-width: 320px;
+    height: auto;
 }
 
 .section__description {
