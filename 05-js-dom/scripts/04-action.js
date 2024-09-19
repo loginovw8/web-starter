@@ -4,9 +4,8 @@
 
 let button = document.querySelector('.hello');
 
-button.addEventListener('click', sayHello);
+button.addEventListener('click', sayClick);
 
-function sayHello() {
-    let input = document.querySelector('.input');
-    console.log(input.value);
+function sayClick() {
+    console.log('Click');
 }
