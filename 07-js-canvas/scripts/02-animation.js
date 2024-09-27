@@ -2,30 +2,34 @@
  * Простые анимации
  */
 
-function ellipse(px, py, r) {
+function ellipse(cx, cy, r) {
     return {
-        px: px,
-        py: py,
+        cx: cx,
+        cy: cy,
         r: r,
+        vx: 3,
+        vy: 2,
         draw: function (ctx) {
             ctx.beginPath();
-            ctx.arc(this.px, this.py, this.r, 0, Math.PI * 2);
+            ctx.arc(this.cx, this.cy, this.r, 0, Math.PI * 2);
             ctx.fill();
         }
     };
 }
 
-function getCanvas(s, ctx) {
+function getCanvas(s, ctx, obj = []) {
     return {
         selector: s,
         ctx: ctx,
+        objects: obj,
         animate: function () {
             this.ctx.clearRect(0, 0, this.selector.width, this.selector.height);
 
             this.ctx.fillStyle = 'red';
 
-            let el = ellipse(this.selector.width / 2, this.selector.height / 2, 50);
-            el.draw(this.ctx);
+            for (let i = 0; i < this.objects.length; i++) {
+                this.objects[i].draw(this.ctx);
+            }
 
             window.requestAnimationFrame(() => this.animate());
         }
@@ -35,4 +39,6 @@ function getCanvas(s, ctx) {
 let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
 
-getCanvas(canvas, ctx).animate();
+let el = ellipse(canvas.width / 2, canvas.height / 2, 50);
+
+getCanvas(canvas, ctx, [el]).animate();
